@@ -133,6 +133,7 @@ int main()
 			if (hand_A == true && hand_C == true && hand_S == true && hand_E == true) {
 				complete_board->show();
 				hidden_door->show();
+				showMessage("쿵~!");
 			}
 			else
 				big_board->show();
