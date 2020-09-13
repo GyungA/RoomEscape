@@ -69,12 +69,11 @@ int main()
 	auto piece_C = Object::create("Images/C조각.png", scene1, 990, 180);
 	piece_C->setOnMouseCallback([&](ObjectPtr object, int x, int y, MouseAction action)->bool {
 		piece_C->pick();
+		hand_C = true;
 
 		if (hand_A == true && hand_C == true && hand_S == true && hand_E == true) {
 			showMessage("모든 조각을 다 모았다! 게시판을 확인하자!");
 		}
-
-		hand_C = true;
 
 		return true;
 		});
